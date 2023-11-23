@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+<!-- <bean id="emp" class="springcoreex1.Emp"/>
+<bean id="stu" class="springcoreex1.Student"/>-->
+
+
+<!-- <bean id="emp" class="springcoreex2.Emp">
+<property name="eid" value="111"/>
+<property name="ename" value="Pankaj"/>
+<property name="esal" value="1000.87"/>
+</bean> -->
+
+
+<bean id="address" class="springcoreex3.Address" >
+<property name="dno" value="A-34-C"/>
+<property name="city" value="New Delhi"/>
+<property name="state" value="Delhi"/>
+</bean>
+
+
+
+<bean id="emp" class="springcoreex3.Emp">
+<property name="eid" value="111"/>
+<property name="ename" value="Pankaj"/>
+<property name="esal" value="1000.87"/>
+<property name="address" ref="address"/>
+</bean>
+</beans>
